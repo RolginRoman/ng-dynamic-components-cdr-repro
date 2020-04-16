@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: '<app-dynamic-wrapper></app-dynamic-wrapper>',
 })
 export class AppComponent {
   title = 'dynamic-component-demo';

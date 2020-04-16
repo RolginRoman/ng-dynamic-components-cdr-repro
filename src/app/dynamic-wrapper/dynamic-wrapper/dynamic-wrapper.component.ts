@@ -4,8 +4,7 @@ import { timer } from 'rxjs';
 
 @Component({
     selector: 'app-dynamic-wrapper',
-    templateUrl: './dynamic-wrapper.component.html',
-    styleUrls: ['./dynamic-wrapper.component.css'],
+    template: '<ng-container #view></ng-container>\n',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DynamicWrapperComponent implements OnInit {
