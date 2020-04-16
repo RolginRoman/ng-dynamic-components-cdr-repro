@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { DynamicWrapperComponent } from './dynamic-wrapper/dynamic-wrapper.component';
 import { DynamicComponent } from '../dynamic/dynamic/dynamic.component';
 import { BUILDER, Builder, UpdateFn } from './dynamic.api';
+import { DynamicModule } from '../dynamic/dynamic.module';
 
 @Injectable()
-class DynamicComponentBuilder extends Builder {
+export class DynamicComponentBuilder extends Builder {
     constructor(private componentFactory: ComponentFactoryResolver, private injector: Injector) {
         super();
     }
@@ -18,7 +19,7 @@ class DynamicComponentBuilder extends Builder {
 }
 
 @Injectable()
-class DynamicComponentBuilder1 extends Builder {
+export class DynamicComponentBuilder1 extends Builder {
     constructor(private componentFactory: ComponentFactoryResolver, private injector: Injector) {
         super();
     }
@@ -33,7 +34,8 @@ class DynamicComponentBuilder1 extends Builder {
 @NgModule({
     declarations: [DynamicWrapperComponent],
     imports: [
-        CommonModule
+        CommonModule,
+        DynamicModule,
     ],
     exports: [
         DynamicWrapperComponent

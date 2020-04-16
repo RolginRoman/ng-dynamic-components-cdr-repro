@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 import { DynamicComponent } from './dynamic/dynamic.component';
 
 @NgModule({
-  declarations: [DynamicComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [DynamicComponent],
+    imports: [
+        CommonModule
+    ],
+    exports: [DynamicComponent],
+    entryComponents: [DynamicComponent]
 })
-export class DynamicModule { }
+export class DynamicModule {
+}
