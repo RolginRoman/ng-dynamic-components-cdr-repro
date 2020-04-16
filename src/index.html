@@ -1,13 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>DynamicComponentDemo</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>DynamicComponentDemo</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+
+<article class="instructions">
+    <h1>Angular Issue Reproduction Info</h1>
+    <ul>
+        <li><b>Step-by-step instructions</b>
+            <ul>
+                <li>Step 1: wait 2 sec</li>
+            </ul>
+        </li>
+        <li><b>Expected and Actual behavior.</b>
+            <ul>
+                <li>Expected: Both components should update</li>
+                <li>Actual: Only second component with direct cdr call updates</li>
+            </ul>
+        </li>
+    </ul>
+</article>
+<app-root></app-root>
 </body>
 </html>

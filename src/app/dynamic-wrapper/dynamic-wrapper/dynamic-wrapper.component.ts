@@ -27,7 +27,7 @@ export class DynamicWrapperComponent implements OnInit {
         this.builders.forEach((builder, index) => {
             let [componentRef, updateFn] = builder.build(this.injector);
             this.view.insert(componentRef.hostView);
-            timer(5000).subscribe(() => {
+            timer(2000).subscribe(() => {
                 updateFn(componentRef);
                 // only second component will updates and refresh DOM
                 index === 0 ? componentRef.changeDetectorRef.detectChanges() : componentRef.instance.cdr.detectChanges();

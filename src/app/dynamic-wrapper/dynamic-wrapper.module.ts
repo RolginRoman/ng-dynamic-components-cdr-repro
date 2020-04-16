@@ -13,6 +13,7 @@ export class DynamicComponentBuilder extends Builder {
 
     build(injector: Injector): [ComponentRef<DynamicComponent>, UpdateFn] {
         let component = this.componentFactory.resolveComponentFactory(DynamicComponent).create(injector);
+        component.instance.index = 'First';
         component.instance.name = 'My Very Cool Dynamic Name';
         return [component, (componentRef => component.instance.name = 'New Name')];
     }
@@ -26,7 +27,8 @@ export class DynamicComponentBuilder1 extends Builder {
 
     build(injector: Injector): [ComponentRef<DynamicComponent>, UpdateFn] {
         let component = this.componentFactory.resolveComponentFactory(DynamicComponent).create(injector);
-        component.instance.name = 'My Very Cool Dynamic Name 1'
+        component.instance.index = 'Second';
+        component.instance.name = 'My Very Cool Dynamic Name 1';
         return [component, (componentRef => component.instance.name = 'New Name1')];
     }
 }

@@ -2,14 +2,18 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } 
 
 @Component({
     selector: 'app-dynamic',
-    templateUrl: './dynamic.component.html',
-    styleUrls: ['./dynamic.component.css'],
+    template: `
+        <h4>{{index}}</h4>
+        <p>{{name}}</p>
+    `,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DynamicComponent implements OnInit {
 
     @Input()
     public name: string;
+    @Input()
+    public index: string;
 
     constructor(public cdr: ChangeDetectorRef) {
     }
