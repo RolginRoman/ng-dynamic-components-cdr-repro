@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Inject, Injector, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
-import {BUILDER, Builder} from "../dynamic.api";
+import {BUILDER, Builder} from "./dynamic.api";
 import { timer } from 'rxjs';
 
 @Component({

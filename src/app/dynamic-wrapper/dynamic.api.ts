@@ -1,5 +1,5 @@
 import {ComponentRef, InjectionToken, Injector} from "@angular/core";
-import { DynamicComponent } from '../dynamic/dynamic/dynamic.component';
+import { DynamicComponent } from '../dynamic/dynamic.component';
 
 export type UpdateFn = <C>(componentRef: ComponentRef<C>) => void;
 

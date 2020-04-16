@@ -1,7 +1,7 @@
 import { ComponentFactoryResolver, ComponentRef, Injectable, Injector, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DynamicWrapperComponent } from './dynamic-wrapper/dynamic-wrapper.component';
-import { DynamicComponent } from '../dynamic/dynamic/dynamic.component';
+import { DynamicWrapperComponent } from './dynamic-wrapper.component';
+import { DynamicComponent } from '../dynamic/dynamic.component';
 import { BUILDER, Builder, UpdateFn } from './dynamic.api';
 import { DynamicModule } from '../dynamic/dynamic.module';
 
